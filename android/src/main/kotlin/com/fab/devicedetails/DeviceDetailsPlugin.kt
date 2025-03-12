@@ -10,7 +10,7 @@ import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
-import io.flutter.plugin.common.PluginRegistry.Registrar
+// import io.flutter.plugin.common.PluginRegistry.Registrar
 
 /** DeviceDetailsPlugin */
 public class DeviceDetailsPlugin : FlutterPlugin, MethodCallHandler {
@@ -36,16 +36,16 @@ public class DeviceDetailsPlugin : FlutterPlugin, MethodCallHandler {
     // them functionally equivalent. Only one of onAttachedToEngine or registerWith will be called
     // depending on the user's project. onAttachedToEngine or registerWith must both be defined
     // in the same class.
-    companion object {
-        @JvmStatic
-        fun registerWith(registrar: Registrar) {
-            if (null == registrar.activity()) {
-                return;
-            }
-            val channel = MethodChannel(registrar.messenger(), "flutter_device_details")
-            channel.setMethodCallHandler(DeviceDetailsPlugin())
-        }
-    }
+    // companion object {
+    //     @JvmStatic
+    //     fun registerWith(registrar: Registrar) {
+    //         if (null == registrar.activity()) {
+    //             return;
+    //         }
+    //         val channel = MethodChannel(registrar.messenger(), "flutter_device_details")
+    //         channel.setMethodCallHandler(DeviceDetailsPlugin())
+    //     }
+    // }
 
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
         when (call.method) {
