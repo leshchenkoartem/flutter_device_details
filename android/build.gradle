@@ -36,6 +36,9 @@ android {
     lintOptions {
         disable 'InvalidPackage'
     }
+     kotlinOptions {
+        jvmTarget = '11'
+    }
 }
 
 dependencies {
